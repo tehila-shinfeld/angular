@@ -1,20 +1,82 @@
+/* עיצוב הכללי של הטופס */
 .form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.join-card {
-    width: 400px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #333333; /* אפור כהה */
 }
 
-.full-width {
+mat-card.join-card {
+    background-color: #444444; /* אפור כהה */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+/* כותרת הטופס */
+.join-card h1 {
+    font-size: 30px;
+    color: #FF0099; /* ורוד מסטיק זורחני */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* עיצוב שדות הקלט */
+mat-form-field.full-width {
     width: 100%;
+    margin-bottom: 20px;
 }
 
-button {
-    margin-top: 20px;
+mat-form-field input,
+mat-form-field mat-select {
+    background-color: #555555; /* אפור כהה */
+    border-radius: 8px;
+    color: white;
+}
+
+mat-form-field input:focus,
+mat-form-field mat-select:focus {
+    background-color: #666666; /* אפור כהה בהירות כשהם בפוקוס */
+}
+
+mat-label {
+    color: #FF0099; /* ורוד מסטיק זורחני */
+}
+
+mat-error {
+    color: #FF66CC; /* ורוד כהה יותר */
+}
+
+/* כפתור שליחה */
+button[type="submit"] {
+    width: 100%;
+    background-color: #FF0099 !important; /* ורוד מסטיק זורחני */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #e60073 !important; /* ורוד כהה יותר ב-hover */
+}
+
+/* עיצוב של שדה Role */
+mat-select {
+    background-color: #555555; /* אפור כהה */
+    border-radius: 8px;
+    color: white;
+}
+
+/* הוספת גבול לטופס שגיאות */
+mat-form-field.ng-invalid.ng-touched {
+    border: 2px solid #FF66CC; /* ורוד כהה כשיש שגיאה */
+}
+
+mat-form-field.ng-valid.ng-touched {
+    border: 2px solid #FF0099; /* ורוד מסטיק זורחני כשיש תקינות */
 }

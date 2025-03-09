@@ -1,5 +1,9 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
+  BidiModule,
+  Directionality
+} from "./chunk-5JQWLTPY.js";
+import {
   Platform,
   RtlScrollAxisType,
   coerceElement,
@@ -7,10 +11,6 @@ import {
   getRtlScrollAxisType,
   supportsScrollBehavior
 } from "./chunk-45HWGQR7.js";
-import {
-  BidiModule,
-  Directionality
-} from "./chunk-5JQWLTPY.js";
 import {
   DOCUMENT
 } from "./chunk-LWORY74U.js";
@@ -1925,4 +1925,4 @@ export {
   CdkScrollableModule,
   ScrollingModule
 };
-//# sourceMappingURL=chunk-KF4HJK3O.js.map
+//# sourceMappingURL=chunk-5VB354LW.js.map

@@ -1,13 +1,32 @@
-<div class="header-btn">
-    <button mat-raised-button color="primary" class="login-btn" [routerLink]="['/signUp']">
-        הרשמה
+
+<mat-toolbar color="primary" class="header">
+    <span class="logo">📚 ניהול קורסים</span>
+    
+    <span class="spacer"></span>
+
+    <div class="header-btns">
+        <button mat-raised-button color="accent" class="login-btn" [routerLink]="['/signUp']">
+            <mat-icon>person_add</mat-icon> הרשמה
+        </button>
+
+        <button mat-raised-button color="accent" class="login-btn" [routerLink]="['/logIn']">
+            <mat-icon>login</mat-icon> התחברות
+        </button>
+    </div>
+</mat-toolbar>
+
+<div class="main-buttons">
+    <button mat-raised-button color="primary" [routerLink]="'/courses'">
+        <mat-icon>school</mat-icon> כל הקורסים
     </button>
 
-    <button mat-raised-button color="primary" class="login-btn" [routerLink]="['/logIn']">
-        התחברות
+    <button mat-raised-button color="warn" [routerLink]="'/courses-management'">
+        <mat-icon>manage_accounts</mat-icon> ניהול קורסים
     </button>
-    <a href=""></a>
 </div>
-<button  [routerLink]="'/courses'">see all courses</button>
-<button  [routerLink]="'/courses-management'">management courses</button>
+
 <router-outlet></router-outlet>
+<div class="hero">
+    <h1>ברוכים הבאים 📔🤍</h1>
+    <h2>-<span class="highlight">LearnFlow</span> – ניהול קורסים חכם</h2>
+</div>
