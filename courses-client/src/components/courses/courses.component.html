@@ -1,0 +1,30 @@
+<div class="courses-container">
+
+    @for(course of courses; track course.id)
+    {
+    <mat-card class="course-card-container">
+
+        <div class="card">
+            <div class="card-body">
+                <mat-card-header>
+                    <a [routerLink]="['/course', course.id]">{{ course.title }}</a>
+                    <mat-card-subtitle>{{ course.description }}</mat-card-subtitle>
+                </mat-card-header>
+
+                <!-- <a href="../course-details/course-details.component.html" class="btn btn-primary">Show Details</a> -->
+                <div class="button-container">
+                    <!-- כפתור הצטרפות                     -->
+                    <button (click)="enroll(course.id)" mat-raised-button color="primary" class="join-button">
+                        הצטרפות
+                    </button>;
+
+                    <!-- כפתור עזיבת הקורס -->
+                    <button (click)="unenroll(course.id)" mat-raised-button color="warn" class="leave-button">
+                        עזיבת הקורס
+                    </button>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+    }
+</div>

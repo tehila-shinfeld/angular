@@ -1,0 +1,92 @@
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.course-card-container {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.course-card-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-header {
+    background-color: #f4f4f9;
+    border-radius: 10px 10px 0 0;
+}
+
+mat-card-title {
+    font-weight: bold;
+    color: #2d2d2d;
+    font-size: 1.25rem;
+}
+
+mat-card-subtitle {
+    color: #757575;
+    font-size: 1rem;
+}
+
+mat-card-content {
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+mat-card-actions button {
+    margin-top: 10px;
+}
+
+mat-card-actions button:first-child {
+    margin-right: 10px;
+}
+
+button.mat-raised-button {
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+button.mat-stroked-button {
+    color: #ff5722;
+    border: 1px solid #ff5722;
+    border-radius: 8px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+button {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    width: 150px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.join-button {
+    background-color: #ad4f5a;
+    color: #2d2d2d
+    /* צבע ירוק */
+}
+
+.leave-button {
+    background-color: #ffb3b7;
+    color: #2d2d2d
+}

@@ -1,0 +1,13 @@
+<div class="course-management-container">
+  <h2>ניהול קורסים</h2>
+  <button mat-raised-button color="primary" [routerLink]="'/add-course'">הוסף קורס</button>
+  @for (course of courses; track course.id)
+  {
+  <h3>{{ course.title }}</h3>
+  <button mat-raised-button color="accent" (click)="editCourse(course.id)">ערוך</button>
+  <button mat-raised-button color="warn" (click)="deleteCourse(course.id)">מחק</button>
+  <!-- <button mat-raised-button color="warn" (click)="addLesson(course.id)">try</button> -->
+  <button mat-raised-button color="warn" (click)="lessonsManage(course.id)">לצפיה ברשימת השיעורים</button>
+
+  }
+</div>

@@ -1,0 +1,22 @@
+/* app.component.css */
+.header-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-btn {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #1976d2; /* צבע גוון כהה יותר בעת מעבר עם העכבר */
+  }
+  

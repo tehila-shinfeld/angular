@@ -1,0 +1,30 @@
+<div class="edit-course-container">
+    <h2>עריכת קורס</h2>
+    <mat-card class="course-card">
+        <form [formGroup]="courseForm" (ngSubmit)="updateCourse()">
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>כותרת הקורס</mat-label>
+                <input matInput formControlName="title" required />
+                <!-- <mat-error *ngIf="editCourseForm.get('title')?.invalid">יש להזין כותרת תקינה</mat-error> -->
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>תיאור הקורס</mat-label>
+                <textarea matInput rows="4" formControlName="description" required></textarea>
+                <!-- <mat-error *ngIf="editCourseForm.get('description')?.invalid">יש להזין תיאור תקין</mat-error> -->
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit" [disabled]="courseForm.invalid">
+                שמור שינויים
+            </button>
+
+            <button mat-button color="warn" routerLink="/courses">
+                ביטול
+            </button>
+        </form>
+    </mat-card>
+<!-- 
+    <mat-card *ngIf="errorMessage" class="error-card">
+        <mat-icon>error</mat-icon> {{ errorMessage }}
+    </mat-card> -->
+</div>

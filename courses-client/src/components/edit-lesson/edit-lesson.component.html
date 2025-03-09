@@ -1,0 +1,22 @@
+<div class="edit-lesson-container">
+    <h2>עריכת שיעור</h2>
+    <mat-card class="lesson-card">
+      <form [formGroup]="lessonForm" (ngSubmit)="updateLesson()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>כותרת השיעור</mat-label>
+          <input matInput formControlName="title" required />
+          <!-- <mat-error *ngIf="lessonForm.get('title')?.invalid">יש להזין כותרת תקינה</mat-error> -->
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>תוכן השיעור</mat-label>
+          <textarea matInput rows="4" formControlName="content" required></textarea>
+          <!-- <mat-error *ngIf="lessonForm.get('content')?.invalid">יש להזין תוכן תקין</mat-error> -->
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="lessonForm.invalid">
+          עדכן שיעור
+        </button>
+      </form>
+    </mat-card>
+  </div>

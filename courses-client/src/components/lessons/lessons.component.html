@@ -1,0 +1,10 @@
+<h1>רשימת השיעורים לקורס </h1>
+<div>
+  <button (click)="addLesson()">הוסף שיעור</button>
+  @for (lesson of lessons; track lesson.id)
+  {
+  <h2>{{ lesson.title }}</h2>
+  <button mat-raised-button color="accent" (click)="editLesson(lesson.id)">ערוך שיעור</button>
+  <button mat-raised-button color="warn" (click)="deleteLesson(lesson.id)">מחק שיעור</button>
+  }
+</div>

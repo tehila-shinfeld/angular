@@ -1,0 +1,22 @@
+@if (errorMessage) {
+  <div class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+}
+
+@if (course) {
+  <h2>{{ course.title }}</h2>
+  <p>{{ course.description }}</p>
+}
+
+<h3>Lessons:</h3>
+@if (lessons.length > 0) {
+  <ul>
+    @for ( lesson of lessons; track lesson.id ) {
+      <li>
+        <h4>{{ lesson.title }}</h4>
+        <p>{{ lesson.content }}</p>
+      </li>
+    }
+  </ul>
+}
